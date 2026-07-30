@@ -1,0 +1,79 @@
+# Publishes the site to GitHub Pages on every push to main.
+#
+# Pages rather than Nook's own infrastructure on purpose: this is a public
+# marketing site, and giving a public repository credentials that can write to
+# the bucket holding people's published pages would be a poor trade for saving a
+# CNAME. Nothing here needs a secret.
+name: Deploy
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# A superseded deploy is cancelled rather than queued: the newest commit is the
+# one that should end up live.
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install a validator
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libxml2-utils
+
+      # Catches an unclosed tag before it reaches the site, which is the whole
+      # class of mistake hand-written HTML is prone to.
+      - name: Check every page parses
+        run: |
+          status=0
+          while IFS= read -r page; do
+            if ! xmllint --html --noout "$page" 2>/tmp/err; then
+              echo "::error file=$page::$(head -3 /tmp/err | tr '\n' ' ')"
+              status=1
+            fi
+          done < <(find public -name '*.html')
+          exit $status
+
+      # A link to a page that does not exist is the most common way a static site
+      # rots, and it is cheap to rule out.
+      - name: Check internal links resolve
+        run: |
+          status=0
+          while IFS= read -r page; do
+            grep -o 'href="/[^"#]*"' "$page" | sed 's/href="//; s/"$//' | while IFS= read -r link; do
+              target="public${link}"
+              case "$link" in
+                */) target="public${link}index.html" ;;
+              esac
+              if [ ! -e "$target" ]; then
+                echo "::error file=$page::broken link $link"
+                exit 1
+              fi
+            done || status=1
+          done < <(find public -name '*.html')
+          exit $status
+
+  deploy:
+    needs: check
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: public
+      - id: deploy
+        uses: actions/deploy-pages@v4

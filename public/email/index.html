@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Email from Nook — Nook</title>
+<meta name="description" content="The only email Nook sends is transactional: a password reset, an address confirmation, or an account-deletion confirmation, each in reply to a request you made.">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="https://www.nooker.app/email/">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <a class="name" href="/">Nook</a>
+  <nav>
+    <a href="/publishing/">Publishing</a>
+    <a href="/email/">Email</a>
+    <a href="/privacy/">Privacy</a>
+  </nav>
+</header>
+<h1>Email from Nook</h1>
+<p class="lede">Nook sends transactional email only, and only in reply to something
+you asked for. There is no newsletter, and there is no marketing list.</p>
+
+<h2>Every message we send</h2>
+<table>
+  <tr><th>Message</th><th>Sent when</th><th>Contains</th></tr>
+  <tr>
+    <td>Password reset</td>
+    <td>You ask to reset the password on your publishing account.</td>
+    <td>A single-use code, and nothing else.</td>
+  </tr>
+  <tr>
+    <td>Address confirmation</td>
+    <td>You add or change the email address on your account.</td>
+    <td>A confirmation code.</td>
+  </tr>
+  <tr>
+    <td>Deletion confirmation</td>
+    <td>You ask to delete your account.</td>
+    <td>A confirmation code.</td>
+  </tr>
+</table>
+
+<h2>How an address gets here</h2>
+<p>One way: you type it while setting up publishing, which is invitation-only.
+No address is bought, scraped, imported, or shared. There is nothing to
+unsubscribe from, because nothing is sent unprompted.</p>
+
+<h2>Sending details</h2>
+<ul>
+  <li>Messages come from <code>noreply@nooker.social</code>.</li>
+  <li>The sending domain is authenticated with SPF, DKIM, and DMARC.</li>
+  <li>Bounces and complaints are monitored, and an address that hard-bounces is
+  not written to again.</li>
+  <li>Volume is proportional to accounts, not to a campaign: a few messages per
+  account per year, driven entirely by what the account holder does.</li>
+</ul>
+
+<h2>Questions</h2>
+<p>Write to <a href="mailto:hello@nooker.social">hello@nooker.social</a>.</p>
+<footer class="site">
+  <nav>
+    <a href="/">Home</a>
+    <a href="/publishing/">Publishing</a>
+    <a href="/email/">Email</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
+  </nav>
+  <p>Nook is made by an independent developer in Seoul. Contact:
+  <a href="mailto:hello@nooker.social">hello@nooker.social</a></p>
+</footer>
+</div>
+</body>
+</html>

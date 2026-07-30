@@ -1,0 +1,110 @@
+/* One stylesheet, no framework, no JavaScript.
+   The site describes a reader that works offline and a publishing feature whose
+   output is plain HTML with a feed; a marketing page that needs a megabyte of
+   script to say so would be arguing against itself. */
+
+:root {
+	--ink: #241d14;
+	--ink-soft: #5c5044;
+	--paper: #fbf5e5;
+	--card: #fffdf6;
+	--rule: #e0d6c1;
+	--accent: #8b5a2d;
+	--accent-ink: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--ink: #f0e9dc;
+		--ink-soft: #b3a692;
+		--paper: #1b1710;
+		--card: #29241b;
+		--rule: #443c2e;
+		--accent: #d5a366;
+		--accent-ink: #1b1710;
+	}
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+	margin: 0;
+	background: var(--paper);
+	color: var(--ink);
+	font: 17px/1.65 ui-serif, Georgia, "Times New Roman", serif;
+	-webkit-text-size-adjust: 100%;
+}
+
+.wrap {
+	max-width: 42rem;
+	margin: 0 auto;
+	padding: 2.5rem 1.25rem 4rem;
+}
+
+a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a:hover { text-decoration-thickness: 2px; }
+
+header.site {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.25rem;
+	align-items: baseline;
+	padding-bottom: 1.25rem;
+	margin-bottom: 2rem;
+	border-bottom: 1px solid var(--rule);
+}
+
+header.site .name {
+	font-size: 1.25rem;
+	font-weight: 700;
+	letter-spacing: -0.01em;
+	color: var(--ink);
+	text-decoration: none;
+}
+
+header.site nav { margin-left: auto; display: flex; gap: 1rem; font-size: 0.95rem; }
+
+h1 { font-size: 2.1rem; line-height: 1.2; letter-spacing: -0.02em; margin: 0 0 0.75rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 0.6rem; letter-spacing: -0.01em; }
+h3 { font-size: 1.05rem; margin: 1.75rem 0 0.4rem; }
+
+.lede { font-size: 1.2rem; color: var(--ink-soft); margin: 0 0 2rem; }
+
+ul, ol { padding-left: 1.25rem; }
+li { margin: 0.35rem 0; }
+
+.card {
+	background: var(--card);
+	border: 1px solid var(--rule);
+	border-radius: 12px;
+	padding: 1.1rem 1.25rem;
+	margin: 1.5rem 0;
+}
+
+.card h3 { margin-top: 0; }
+.card p:last-child { margin-bottom: 0; }
+
+.grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.grid .card { margin: 0; }
+
+table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
+th, td { text-align: left; padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 700; }
+
+code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
+code { background: var(--card); border: 1px solid var(--rule); border-radius: 4px; padding: 0.05em 0.3em; }
+pre { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 0.9rem 1rem; overflow-x: auto; }
+pre code { background: none; border: 0; padding: 0; }
+
+footer.site {
+	margin-top: 4rem;
+	padding-top: 1.25rem;
+	border-top: 1px solid var(--rule);
+	color: var(--ink-soft);
+	font-size: 0.9rem;
+}
+
+footer.site nav { display: flex; flex-wrap: wrap; gap: 1rem; margin-bottom: 0.75rem; }
+
+.muted { color: var(--ink-soft); }
+.small { font-size: 0.9rem; }

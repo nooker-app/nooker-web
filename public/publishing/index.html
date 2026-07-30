@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publishing — Nook</title>
+<meta name="description" content="Nook Plus turns what you write into a small website with an RSS feed, stored in an AT Protocol repository you own.">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="https://www.nooker.app/publishing/">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <a class="name" href="/">Nook</a>
+  <nav>
+    <a href="/publishing/">Publishing</a>
+    <a href="/email/">Email</a>
+    <a href="/privacy/">Privacy</a>
+  </nav>
+</header>
+<h1>Publishing with Nook</h1>
+<p class="lede">Write in Nook. It becomes a page on the web with a feed anyone can
+follow — in Nook, or in any other reader.</p>
+
+<h2>Where your writing lives</h2>
+<p>Not in Nook&rsquo;s database. Each post is a record in a personal repository on
+the <a href="https://atproto.com">AT Protocol</a>, the same kind of repository
+Bluesky accounts use. Nook reads those records and renders the pages and feeds
+that other people see.</p>
+<p>The practical difference: the records are the original, and the website is a
+rendering of them. If Nook stopped existing tomorrow, the writing would not go
+with it — another conforming service could publish the same records, and the
+<a href="https://github.com/nooker-app/nook-plus-protocol">contract describing
+how</a> is public.</p>
+
+<h2>What you get</h2>
+<table>
+  <tr><th>A handle</th><td>Your identity on the network, like <code>yourname.nooker.app</code>.</td></tr>
+  <tr><th>A site</th><td>A page per post, at <code>nooker.app/@yourname</code>.</td></tr>
+  <tr><th>A feed</th><td>RSS and Atom, so anyone can follow you from any reader.</td></tr>
+  <tr><th>An export</th><td>Your records, in full, whenever you ask.</td></tr>
+</table>
+
+<h2>What it is not</h2>
+<ul>
+  <li>Not a requirement. Reading works with no account at all.</li>
+  <li>Not a social network. There are no followers, likes, or replies.</li>
+  <li>Not a place for images yet. Version one is text and Markdown.</li>
+</ul>
+
+<h2>Deleting</h2>
+<p>Deleting a post deletes the record, and the page and feed entry follow within
+two minutes. Deleting the account removes the repository. What other people have
+already copied is beyond anyone&rsquo;s reach, and no service can honestly promise
+otherwise.</p>
+
+<h2>Invitations</h2>
+<p>Publishing is invitation-only for now, while backup and deletion are being
+proved out on a small group. This is deliberate: an account whose recovery has
+not been rehearsed is not one to hand out widely.</p>
+<footer class="site">
+  <nav>
+    <a href="/">Home</a>
+    <a href="/publishing/">Publishing</a>
+    <a href="/email/">Email</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
+  </nav>
+  <p>Nook is made by an independent developer in Seoul. Contact:
+  <a href="mailto:hello@nooker.social">hello@nooker.social</a></p>
+</footer>
+</div>
+</body>
+</html>
