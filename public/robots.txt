@@ -1,0 +1,6 @@
+# The site describes a reader and a publishing feature; every page here is meant
+# to be found. The one thing worth stating is where the sitemap is.
+User-agent: *
+Allow: /
+
+Sitemap: https://www.nooker.app/sitemap.xml

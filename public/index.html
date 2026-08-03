@@ -9,11 +9,34 @@
 <link rel="apple-touch-icon" href="/icon.png">
 <link rel="stylesheet" href="/style.css">
 <link rel="canonical" href="https://www.nooker.app/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Nook: a quiet RSS reader for Mac and iPhone">
+<meta property="og:description" content="Nook is an offline-first RSS reader for macOS and iOS. Nook Plus adds publishing: your own site and feed, stored in a repository you own.">
+<meta property="og:url" content="https://www.nooker.app/">
+<meta property="og:site_name" content="Nook">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://www.nooker.app/icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nook: a quiet RSS reader for Mac and iPhone">
+<meta name="twitter:description" content="Nook is an offline-first RSS reader for macOS and iOS. Nook Plus adds publishing: your own site and feed, stored in a repository you own.">
+<meta name="twitter:image" content="https://www.nooker.app/icon.png">
+<meta name="theme-color" content="#fbf5e5">
 <!-- Proves to Google Search Console that this site is ours. Only the homepage
      needs it — that is the one URL the check fetches — so it is not repeated on
      every page. Verification is checked again from time to time, so the tag
      stays rather than being removed once it has passed. -->
 <meta name="google-site-verification" content="7JpU7S-HFKqPSxsknVbPcjUAvelZpFwbopT4ianywxE">
+<!-- Structured data, not script: a browser never executes an ld+json block and
+     fetches nothing for it, so the site stays as scriptless as it claims. It
+     states what the two things on offer are, which is what a search engine
+     otherwise has to infer from prose. -->
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebSite","@id":"https://www.nooker.app/#site","name":"Nook","url":"https://www.nooker.app/","inLanguage":"en"},
+{"@type":"SoftwareApplication","name":"Nook","applicationCategory":"NewsApplication","operatingSystem":"macOS, iOS","url":"https://www.nooker.app/","description":"An offline-first RSS reader for macOS and iOS.","isPartOf":{"@id":"https://www.nooker.app/#site"}}
+]}
+</script>
 </head>
 <body>
 <div class="wrap">
