@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Hand-written, like the rest of the site: five pages that change when someone
+<!-- Hand-written, like the rest of the site: six pages that change when someone
      edits them, not on a schedule. lastmod is deliberately absent — a date that
      is not maintained is worse than none, because a crawler believes it. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -8,4 +8,5 @@
   <url><loc>https://www.nooker.app/email/</loc></url>
   <url><loc>https://www.nooker.app/privacy/</loc></url>
   <url><loc>https://www.nooker.app/terms/</loc></url>
+  <url><loc>https://www.nooker.app/support/</loc></url>
 </urlset>

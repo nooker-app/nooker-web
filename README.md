@@ -17,6 +17,7 @@ public/
   email/              every message the service sends, and why
   privacy/            what is stored and what is not
   terms/
+  support/            how to get help, and what to include
   404.html
   style.css
   CNAME               the custom domain GitHub Pages serves
@@ -25,7 +26,7 @@ public/
 ## Editing
 
 Edit the HTML. Every page shares the same header, footer, and stylesheet by
-copy, which is the right trade at six pages: a generator would be more to
+copy, which is the right trade at seven pages: a generator would be more to
 install and understand than the duplication it removes.
 
 ## Deploying
