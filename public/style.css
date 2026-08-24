@@ -87,6 +87,32 @@ li { margin: 0.35rem 0; }
 .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
 .grid .card { margin: 0; }
 
+/* The one thing on the site that is meant to be clicked rather than read. It
+   exists for the download page: until there was something to install, every
+   link on the site was a link in a sentence. */
+.button {
+	display: inline-block;
+	background: var(--accent);
+	color: var(--accent-ink);
+	border: 1px solid var(--accent);
+	border-radius: 8px;
+	padding: 0.6rem 1.15rem;
+	font-weight: 700;
+	text-decoration: none;
+}
+
+.button:hover { text-decoration: none; filter: brightness(1.08); }
+
+/* align-items because a row can hold both a button and Apple's badge, which is
+   the taller of the two and sets the row's height. */
+.buttons { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin: 1.25rem 0; }
+
+/* Apple's badge is supplied at its own size and must not be redrawn, so it is
+   scaled and otherwise left alone. line-height: 0 keeps the link from adding a
+   strip of text leading under the image it wraps. */
+a.badge { display: inline-block; line-height: 0; }
+a.badge img { display: block; width: 180px; height: auto; }
+
 table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; font-size: 0.95rem; }
 th, td { text-align: left; padding: 0.55rem 0.6rem; border-bottom: 1px solid var(--rule); vertical-align: top; }
 th { font-weight: 700; }
@@ -95,6 +121,11 @@ code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-si
 code { background: var(--card); border: 1px solid var(--rule); border-radius: 4px; padding: 0.05em 0.3em; }
 pre { background: var(--card); border: 1px solid var(--rule); border-radius: 10px; padding: 0.9rem 1rem; overflow-x: auto; }
 pre code { background: none; border: 0; padding: 0; }
+
+/* A command meant to be run, not read: one click selects the whole line, so it
+   can be copied with the keyboard. A copy button would need JavaScript, and one
+   CSS property buys most of what it would. */
+pre.command { user-select: all; -webkit-user-select: all; cursor: text; }
 
 footer.site {
 	margin-top: 4rem;

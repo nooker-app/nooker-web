@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Download Nook</title>
+<meta name="description" content="Nook for iPhone and iPad is on the App Store. The Mac app is a direct download or one line of Homebrew. Both are free, and reading needs no account.">
+<link rel="icon" href="/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="/icon.png">
+<link rel="stylesheet" href="/style.css">
+<link rel="canonical" href="https://www.nooker.app/download/">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Download Nook">
+<meta property="og:description" content="Nook for iPhone and iPad is on the App Store. The Mac app is a direct download or one line of Homebrew. Both are free, and reading needs no account.">
+<meta property="og:url" content="https://www.nooker.app/download/">
+<meta property="og:site_name" content="Nook">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://www.nooker.app/icon.png">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Download Nook">
+<meta name="twitter:description" content="Nook for iPhone and iPad is on the App Store. The Mac app is a direct download or one line of Homebrew.">
+<meta name="twitter:image" content="https://www.nooker.app/icon.png">
+<meta name="theme-color" content="#fbf5e5">
+</head>
+<body>
+<div class="wrap">
+<header class="site">
+  <a class="name" href="/">Nook</a>
+  <nav>
+    <a href="/download/">Download</a>
+    <a href="/publishing/">Publishing</a>
+    <a href="/email/">Email</a>
+    <a href="/privacy/">Privacy</a>
+  </nav>
+</header>
+<h1>Download Nook</h1>
+<p class="lede">Free on iPhone, iPad, and Mac. Reading needs no account, so there
+is nothing to sign up for once it is installed.</p>
+
+<h2>iPhone and iPad</h2>
+<p>Nook is on the App Store, and needs iOS or iPadOS 18 or later.</p>
+<!-- Apple's own badge artwork, from their marketing toolbox and unmodified, as
+     their guidelines require. Two files rather than one because Apple supplies a
+     light and a dark variant, and the site follows the reader's system theme;
+     <picture> picks between them without a line of script. -->
+<div class="buttons">
+  <a class="badge" href="https://apps.apple.com/us/app/nook-read-write-own/id6797773158">
+    <picture>
+      <source srcset="/app-store-badge-white.svg" media="(prefers-color-scheme: dark)">
+      <img src="/app-store-badge-black.svg" alt="Download Nook on the App Store" width="180" height="60">
+    </picture>
+  </a>
+</div>
+
+<h2>Mac</h2>
+<p>The Mac app is a native build of its own, not the iPhone app running on Apple
+silicon, and it comes from here rather than from the App Store. It is signed and
+notarized by Apple, so it opens like any other app, and it updates itself after
+that. It needs macOS 26 or later.</p>
+
+<h3>Install with Homebrew</h3>
+<pre class="command"><code>brew install --cask nooker-app/tap/nook</code></pre>
+<p class="small muted">Click the command to select all of it, then press
+&#8984;C.</p>
+<p>The cask lives in
+<a href="https://github.com/nooker-app/homebrew-tap">nooker-app/homebrew-tap</a>
+and installs the same disk image as the button below, so Homebrew is a
+convenience rather than a different build.</p>
+
+<h3>Or download the disk image</h3>
+<div class="buttons">
+  <a class="button" href="https://github.com/nooker-app/nook/releases/latest/download/Nook.dmg">Download Nook for Mac</a>
+</div>
+<p>That downloads the current build directly. Open the image and drag
+<strong>Nook</strong> into <strong>Applications</strong>. Every release, current
+and past, is listed on
+<a href="https://github.com/nooker-app/nook/releases">the releases page</a>.</p>
+
+<h2>If you also want to write</h2>
+<p>Nook Plus is an optional feature that gives you a small website with an RSS
+feed, and stores what you write in a repository that belongs to you. It is open to
+invited writers while the service is being proved out, and nothing about reading
+depends on it.</p>
+<p><a href="/publishing/">How publishing works &rarr;</a></p>
+<footer class="site">
+  <nav>
+    <a href="/">Home</a>
+    <a href="/download/">Download</a>
+    <a href="/publishing/">Publishing</a>
+    <a href="/email/">Email</a>
+    <a href="/privacy/">Privacy</a>
+    <a href="/terms/">Terms</a>
+    <a href="/support/">Support</a>
+  </nav>
+  <p>Nook is made by an independent developer in Seoul. Reach us through
+  <a href="https://github.com/nooker-app/nook/issues">GitHub issues</a>.</p>
+</footer>
+</div>
+</body>
+</html>

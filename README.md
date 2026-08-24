@@ -13,6 +13,7 @@ megabyte of script to say so would be arguing against itself.
 ```text
 public/
   index.html          what Nook is
+  download/           where to get it, and how to get past Gatekeeper
   publishing/         how Nook Plus works, and where writing lives
   email/              every message the service sends, and why
   privacy/            what is stored and what is not
@@ -26,7 +27,7 @@ public/
 ## Editing
 
 Edit the HTML. Every page shares the same header, footer, and stylesheet by
-copy, which is the right trade at seven pages: a generator would be more to
+copy, which is the right trade at eight pages: a generator would be more to
 install and understand than the duplication it removes.
 
 ## Deploying

@@ -34,7 +34,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebSite","@id":"https://www.nooker.app/#site","name":"Nook","url":"https://www.nooker.app/","inLanguage":"en"},
-{"@type":"SoftwareApplication","name":"Nook","applicationCategory":"NewsApplication","operatingSystem":"macOS, iOS","url":"https://www.nooker.app/","description":"An offline-first RSS reader for macOS and iOS.","isPartOf":{"@id":"https://www.nooker.app/#site"}}
+{"@type":"SoftwareApplication","name":"Nook","applicationCategory":"NewsApplication","operatingSystem":"macOS 26, iOS 18","url":"https://www.nooker.app/","downloadUrl":"https://www.nooker.app/download/","description":"An offline-first RSS reader for macOS and iOS.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"isPartOf":{"@id":"https://www.nooker.app/#site"}}
 ]}
 </script>
 </head>
@@ -43,6 +43,7 @@
 <header class="site">
   <a class="name" href="/">Nook</a>
   <nav>
+    <a href="/download/">Download</a>
     <a href="/publishing/">Publishing</a>
     <a href="/email/">Email</a>
     <a href="/privacy/">Privacy</a>
@@ -77,11 +78,24 @@ repository that belongs to you rather than in Nook&rsquo;s database.</p>
 <p><a href="/publishing/">How publishing works &rarr;</a></p>
 
 <h2>Getting Nook</h2>
-<p>Nook is in development. It is not yet on the App Store, and publishing is
-limited to invited writers while the service is being proved out.</p>
+<p>Nook for iPhone and iPad is on the App Store. The Mac app is a direct
+download, or one line of Homebrew. Both are free, and reading needs no
+account.</p>
+<div class="buttons">
+  <a class="badge" href="https://apps.apple.com/us/app/nook-read-write-own/id6797773158">
+    <picture>
+      <source srcset="/app-store-badge-white.svg" media="(prefers-color-scheme: dark)">
+      <img src="/app-store-badge-black.svg" alt="Download Nook on the App Store" width="180" height="60">
+    </picture>
+  </a>
+  <a class="button" href="/download/">Nook for Mac</a>
+</div>
+<p class="small muted">Publishing is open to invited writers while the service is
+being proved out. Reading does not depend on it.</p>
 <footer class="site">
   <nav>
     <a href="/">Home</a>
+    <a href="/download/">Download</a>
     <a href="/publishing/">Publishing</a>
     <a href="/email/">Email</a>
     <a href="/privacy/">Privacy</a>
